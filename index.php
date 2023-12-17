@@ -7,10 +7,18 @@
     <div class = "my-4"></div>
     <div class = "container">
         <center>
-            <button type="button" class="btn btn-primary">Halaman Kacamata</button>
+        <a href="kacamata.php">
+            <button type="button" class="btn btn-primary">kacamata</button>
+        </a>
+        <a href="pembeli.php">
             <button type="button" class="btn btn-primary">Halaman Pembeli</button>
-            <button type="button" class="btn btn-primary">Halaman Transaksi</button>
-            <button type="button" class="btn btn-primary">Halaman Detail Transaksi</button>
+        </a>
+        <a href="transaksi.php">
+            <button type="button" class="btn btn-primary">Transaksi</button>
+        </a>
+        <a href="detail_transaksi.php">
+            <button type="button" class="btn btn-primary">Detail Transaksi</button>
+        </a>
         </center>
     </div>
 </html>
