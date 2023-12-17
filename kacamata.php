@@ -26,4 +26,39 @@
     </div>
   </div>
 </nav>
+<body>
+<?php
+include_once("config.php");
+$result = mysqli_query($mysqli, "SELECT * FROM kacamata ORDER BY id_kacamata DESC");
+?>
+
+<a href="add.php">Tambah Kacamata</a><br/><br/>
+ 
+    <table width='80%' class = "table table-secondary">
+ 
+    <tr class = "table-secondary">
+        <th>Id Kacamata</th> 
+        <th>Warna</th> 
+        <th>Ukuran Kiri</th> 
+        <th>Ukuran Kanan</th> 
+        <th>Bahan Frame</th>
+        <th>Harga</th>
+        <th>Action</th>
+    </tr>
+    <?php  
+    while($row = mysqli_fetch_array($result)) {         
+        echo "<tr class = 'table-secondary'>";
+          echo "<td class = 'table-secondary'>".$row['id_kacamata']."</td>";
+          echo "<td class = 'table-secondary'>".$row['warna']."</td>";
+          echo "<td class = 'table-secondary'>".$row['ukuran_kiri']."</td>";
+          echo "<td class = 'table-secondary'>".$row['ukuran_kanan']."</td>";
+          echo "<td class = 'table-secondary'>".$row['bahan_frame']."</td>"; 
+          echo "<td class = 'table-secondary'>".$row['harga']."</td>";   
+          echo "<td><a href='edit.php?id=$row[id_kacamata]'>Edit</a> | <a href='delete.php?id=$row[id_kacamata]'>Delete</a></td>";
+          echo"</tr>";        
+    }
+    ?>
+    </table>
+</body>
 </html>
+
